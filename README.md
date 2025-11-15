@@ -3,21 +3,15 @@ A simple voice-driven chatbot that listens for a wake word (Alpha), records a sp
 Features
 
 Wake-word listening (“Alpha”) to start a question.
-
 Records audio to input.wav.
-
 Uses Google Web Speech (via SpeechRecognition) to transcribe audio.
-
 Sends transcriptions to Google Gemini (google-generativeai) to generate answers.
-
 Speaks the generated answer using pyttsx3.
 
 Requirements
 
 Python 3.8+ recommended
-
 Microphone and speakers working on your machine
-
 Internet access (for speech recognition and Gemini API)
 
 Python packages:
@@ -31,8 +25,6 @@ pyaudio
 You can install them with:
 
 pip install google-generativeai pyttsx3 SpeechRecognition pyaudio
-
-
 Important: Installing pyaudio sometimes fails on Windows. If that happens, install a prebuilt wheel appropriate for your Python version (e.g. from [Unofficial Windows Binaries for Python Extension Packages]) or use pipwin:
 
 pip install pipwin
@@ -40,7 +32,6 @@ pipwin install pyaudio
 
 
 On Debian/Ubuntu:
-
 sudo apt-get install portaudio19-dev python3-pyaudio
 pip install pyaudio
 
@@ -49,12 +40,10 @@ Secure API Key Handling (DO NOT hard-code keys)
 Do not commit your API key into source files. Instead store it in an environment variable and read it in the script.
 
 Example (Linux / macOS):
-
 export GEMINI_API_KEY="YOUR_GOOGLE_GEMINI_API_KEY"
 
 
 Windows PowerShell:
-
 $env:GEMINI_API_KEY="YOUR_GOOGLE_GEMINI_API_KEY"
 
 
